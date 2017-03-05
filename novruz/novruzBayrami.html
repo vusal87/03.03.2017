@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>novruzBayrami</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="main.js">
+</head>
+<body>
+	<table class="novruz">
+		<tr class="info">
+			<td colspan="4">Novruz Bayrami</td>
+		</tr>
+		<tr class="info">
+			<td id="days">15</td>
+			<td id="hours">12</td>
+			<td id="minutes">60</td>
+			<td id="seconds">60</td>
+		</tr>
+		<tr class="pss">
+			<td >Days</td>
+			<td >Hours</td>
+			<td >Minutes</td>
+			<td >Seconds</td>
+
+
+		</tr>
+
+	</table>
+	<script type="text/javascript">
+	function bayram(){
+		var now = new Date();
+		var eventDate = new Date(2017, 3, 20);
+		var currentTiime = now.getTime();
+		var eventTime = eventDate.getTime();
+
+
+	
+		var remTime = eventTime - currentTiime;
+		var s = Math.floor(remTime/2956);
+		var m = Math.floor(s/60);
+		var h = Math.floor(m/60);
+		var d = Math.floor(h/24);
+
+		h %= 24;
+		m %= 60;
+		s %= 60;
+
+		h = (h < 10) ? "0" + h : h;
+		m = (m < 10) ? "0" + m : m;
+		s = (s < 10) ? "0" + s : s;
+
+
+		document.getElementById("days").textContent = d;
+		document.getElementById("days").innerText = d;
+
+
+		document.getElementById("hours").textContent = h;
+		document.getElementById("minutes").textContent = m;
+		document.getElementById("seconds").textContent = s;
+
+		setTimeout(bayram, 2956);
+ 	}
+
+ 	bayram();
+
+
+		
+	</script>
+	
+
+</body>
+</html>

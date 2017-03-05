@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>musicPlayer</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="main.js">
+</head>
+<body>
+<div id="contaner">
+	<div id="audio-img">
+		<img class="cover">
+	</div>
+	<div id="audio-player">
+		<div id="audio-info">
+			<span class="artist"></span> - <span class="title"></span>
+		</div>
+		<input id="volume" type="range" min="0" max="10" volue="5">
+		<br>
+		<div id="audio-buttons">
+			<button id="prev"></button>
+			<button id="play"></button>
+			<button id="pause"></button>
+			<button id="stop"></button>
+			<button id="next"></button>
+		</div>
+		<div class="clearfix"></div>
+		<div id="tracker">
+			<div id="pregressbar">
+				<span id="progres"></span>
+			</div>
+			<span id="duration"></span>
+		</div>
+		<div class="clearfix"></div>
+		<ul id="Playlist">
+			<li song="Selena Gomez - We Dont talk Anymore.mp3" cover=cover1.jpg artist="selena"> We Dont talk Anymore.mp3</li>
+		</ul>
+	</div>
+</div>
+<script src=jquery.js></script>
+<script src=main.js></script>
+</body>
+</html>
